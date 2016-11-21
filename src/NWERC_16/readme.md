@@ -1,0 +1,49 @@
+# North-West European Regional Contest
+
+## Exam Redistribution
+
+Linda is giving an exam. When the exam is over, Linda
+will redistribute the exams among the students for a peer
+review, so they may grade each other’s answers and assign
+preliminary scores.
+The students are split up in several rooms of varying sizes.
+Linda has devised the following scheme for redistributing
+the exams:
+1. Linda visits the first room, picks up all exams written
+there, and places them in a pile.
+2. In each subsequent room Linda takes exams from the
+top of her pile and randomly distributes them to the
+students in the room. She then picks up all exams
+written in that room and adds them to the bottom of
+her pile.
+3. After having visited each room exactly once, Linda
+returns to the first room, and distributes the remaining
+exams from her pile there.
+Naturally, it is imperative that no student receives their own exam to review, and that Linda
+does not run out of exams in her pile while doing the redistribution (i.e., that when entering a
+room after the first one, Linda’s pile contains at least as many exams as there are students in
+the room). Whether or not this is the case depends on the order in which the rooms are visited.
+We say that an ordering of the rooms is safe if Linda will not run out of exams in her pile when
+visiting rooms in that order, and that there is no chance that any student receives their own exam
+to review.
+Can you find a safe order in which to visit the rooms (or determine that no safe order exists)?
+Input
+The input consists of:
+• one line containing an integer n (2 ≤ n ≤ 30), the number of rooms.
+• one line containing n integers s1, . . . , sn (1 ≤ si ≤ 100 for each i), where si
+is the number
+of students in room i.
+Output
+If it is impossible to redistribute the exams safely, output “impossible”. Otherwise, output a
+safe order in which to visit the rooms. If there are multiple safe orders, you may give any of them.
+
+Sample Input 1
+4
+2 3 3 1
+Sample Output 1
+2 3 4 1
+Sample Input 2
+2
+10 20
+Sample Output 2
+impossible
