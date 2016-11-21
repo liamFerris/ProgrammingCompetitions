@@ -19,10 +19,10 @@ public class ExamRedistribution {
         ArrayList<Integer> studentClone = (ArrayList<Integer>) students.clone();
         Collections.sort(students);
 
-        if (students.get(numberOfRooms - 1) > students.stream().mapToInt(i->i).sum()*2) {
+        if (students.get(numberOfRooms - 1)*2 > students.stream().mapToInt(i->i).sum()) {
             System.out.println("impossible");
         } else {
-            
+
             for (int i = numberOfRooms - 1; i >= 0; i--) {
                 System.out.print(studentClone.indexOf(students.get(i)) + 1 + " ");
                 studentClone.set(studentClone.indexOf(students.get(i)), 0);
