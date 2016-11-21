@@ -1,8 +1,11 @@
+package UKIEPC_16;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-public class ProblemE {
+public class ElegantShowroom {
     public static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
         int height = scan.nextInt();
         int width = scan.nextInt();
@@ -10,11 +13,13 @@ public class ProblemE {
         int graph [][] = new int[height*width][height*width];
         int dist[] = new int[height*width];
         Boolean spt[] = new Boolean[height*width];
+
         for (int i = 0; i < height*width; i++) {
             for (int j = 0; j < height*width; j++) {
                 graph[i][j] = -1;
             }
         }
+
         for (int i = 0; i < height; i++) {
             String row = scan.next();
             for (int j = 0; j < width; j++) {
@@ -32,6 +37,7 @@ public class ProblemE {
                 }
             }
         }
+
         for (int i = 0; i < graph.length; i++) {
             if (showroom[i/width][i%width] != '#') {
                 try {
@@ -48,11 +54,13 @@ public class ProblemE {
                 } catch (Exception e) {}
             }
         }
+
         for (int i = 0; i < height*width; i++)
         {
             dist[i] = Integer.MAX_VALUE;
             spt[i] = false;
         }
+
         dist[((scan.nextInt()-1)*width) + scan.nextInt()-1] = 1;
         for (int count = 0; count < height*width-1; count++) {
             int u = minDistance(dist, spt, height*width);
@@ -65,16 +73,17 @@ public class ProblemE {
                     dist[v] = dist[u] + graph[u][v];
             }
         }
+
         ArrayList<Integer> doors = new ArrayList<>();
         for (int i = 0; i < width; i++) {
             if (showroom[0][i] == 0){ //TOP
                 doors.add(dist[i]);
             }
-
             if (showroom[0][height-1] == 0) { //BOTTOM
                 doors.add(dist[(height-1)*(width-1) + i]);
             }
         }
+
         for (int i = 0; i < height; i++) {
             if (showroom[i][0] == 0){ //LEFT
                 doors.add(dist[i*width]);
@@ -89,6 +98,7 @@ public class ProblemE {
         }
         System.out.println(lowest);
     }
+
     public static int minDistance(int dist[], Boolean sptSet[], int V)
     {
         int min = Integer.MAX_VALUE;
