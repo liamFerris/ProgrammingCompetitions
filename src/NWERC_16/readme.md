@@ -8,7 +8,8 @@ review, so they may grade each other’s answers and assign
 preliminary scores.
 The students are split up in several rooms of varying sizes.
 Linda has devised the following scheme for redistributing
-the exams:<br>
+the exams:
+
 1. Linda visits the first room, picks up all exams written
 there, and places them in a pile.
 2. In each subsequent room Linda takes exams from the
@@ -26,7 +27,8 @@ the room). Whether or not this is the case depends on the order in which the roo
 We say that an ordering of the rooms is safe if Linda will not run out of exams in her pile when
 visiting rooms in that order, and that there is no chance that any student receives their own exam
 to review.
-Can you find a safe order in which to visit the rooms (or determine that no safe order exists)?<br>
+Can you find a safe order in which to visit the rooms (or determine that no safe order exists)?
+
 ### Input
 The input consists of:<br>
 • one line containing an integer n (2 ≤ n ≤ 30), the number of rooms.<br>
