@@ -139,16 +139,5 @@ public class IronAndCoal {
                 System.out.println(srcCoal.get(0) + srcIron.get(0));
             }
         }
-
-        //Check src -> any ore -> any coal. Sort
-        //Check src -> any coal -> any ore. Sort
-        //Check src -> any coal + src -> any ore. Sort
-
-        //Pick lowest of the above.
-
-
     }
-
-
-
 }
