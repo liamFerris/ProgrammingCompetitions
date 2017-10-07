@@ -116,7 +116,7 @@ with resource “coal” in order to be able to build soldiers. What is the mini
 you need to reach this goal?
 
 ### Input
-The input consists of:
+The input consists of:<br>
 • One line with three integers n (2 ≤ n ≤ 105
 ), the number of cells on the playing field, m
 (1 ≤ m < n), the number of cells containing iron ore, and k (1 ≤ k < n), the number of
